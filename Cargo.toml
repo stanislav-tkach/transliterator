@@ -1,13 +1,12 @@
 [package]
-
 name = "transliterator"
 version = "0.0.1"
 authors = ["DarkEld3r <stanislav.tkach@gmail.com>"]
 
-[bin]
+[[bin]]
 name = "ctransliterator"
 path = "cui/main.rs"
 
-[bin]
+[[bin]]
 name = "transliterator"
 path = "gui/main.rs"
