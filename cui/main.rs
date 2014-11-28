@@ -1,6 +1,6 @@
 #![feature(globs)]
 
-extern crate transliterator;
+mod transliterator;
 use transliterator::*;
 
 fn main()
