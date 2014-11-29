@@ -10,3 +10,6 @@ path = "cui/main.rs"
 [[bin]]
 name = "transliterator"
 path = "gui/main.rs"
+
+[dependencies.transliterator]
+path = "transliterator"
