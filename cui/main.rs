@@ -1,9 +1,10 @@
 #![feature(globs)]
 
-mod transliterator;
-use transliterator::*;
+extern crate core;
+use core::*;
 
 fn main()
 {
-  println!("Hello, CUI world!")
+  println!("Hello, CUI world!");
+  core::test();
 }

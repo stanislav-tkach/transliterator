@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-fn test()
+pub fn test()
 {
   println!("transliterator!")
 
