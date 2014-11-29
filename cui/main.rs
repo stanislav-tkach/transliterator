@@ -1,7 +1,4 @@
-#![feature(globs)]
-
 extern crate core;
-use core::*;
 
 fn main()
 {
