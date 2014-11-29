@@ -1,5 +1,9 @@
 use std::collections::HashMap;
 
+pub fn translate()
+{
+}
+
 pub fn test()
 {
   println!("transliterator!")
