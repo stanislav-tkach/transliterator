@@ -1,7 +1,9 @@
 use std::collections::HashMap;
 
-pub fn translate()
+pub fn translate_char(char current, char previous) -> char
 {
+  // TODO: FIXME.
+  'a'
 }
 
 pub fn translate_word()
@@ -13,7 +15,7 @@ pub fn translate_word()
   }
 }
 
-pub fn translate_text()
+pub fn translate()
 {
 // Split on spaces and call translate_word.
 }
