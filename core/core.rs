@@ -6,15 +6,18 @@ pub fn translate_char(current : char, previous : char) -> char
   'a'
 }
 
-pub fn translate(text : &string)
+pub fn translate(text : &str) -> String
 {
-  let mut result = String::with_capacity(text.capacity());
+  let mut result = String::with_capacity(text.len() * std::mem::size_of::<char>());
 
-  let mut previous = '';
-  for 
+  let mut previous = ' ';
+  for c in text.chars()
   {
-    previous = ...;
+    previous = translate_char(c, previous);
+    result.push(previous);
   }
+
+  result
 }
 
 pub fn test()
