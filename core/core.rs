@@ -1,23 +1,20 @@
 use std::collections::HashMap;
 
-pub fn translate_char(char current, char previous) -> char
+pub fn translate_char(current : char, previous : char) -> char
 {
   // TODO: FIXME.
   'a'
 }
 
-pub fn translate_word()
+pub fn translate(text : &string)
 {
+  let mut result = String::with_capacity(text.capacity());
+
   let mut previous = '';
   for 
   {
     previous = ...;
   }
-}
-
-pub fn translate()
-{
-// Split on spaces and call translate_word.
 }
 
 pub fn test()
