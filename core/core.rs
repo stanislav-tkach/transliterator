@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 
-struct Translator
+pub struct Translator
 {
   rules: HashMap<(char, char), char>,
 }
 
 impl Translator
 {
-  fn new() -> Translator
+  pub fn new() -> Translator
   {
     Translator
     {
@@ -15,7 +15,7 @@ impl Translator
     }
   }
 
-  fn default() -> Translator
+  pub fn default() -> Translator
   {
     Translator
     {
@@ -42,14 +42,4 @@ impl Translator
 
     result
   }
-}
-
-pub fn test()
-{
-  println!("transliterator!")
-
-  let mut test = HashMap::new();
-
-  test.insert(('a', 'a'), 'a');
-  test.insert(('a', 'b'), 'b');
 }
