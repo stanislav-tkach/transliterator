@@ -1,23 +1,47 @@
 use std::collections::HashMap;
 
-pub fn translate_char(current : char, previous : char) -> char
+struct Translator
 {
-  // TODO: FIXME.
-  'a'
+  rules: HashMap<(char, char), char>,
 }
 
-pub fn translate(text : &str) -> String
+impl Translator
 {
-  let mut result = String::with_capacity(text.len() * std::mem::size_of::<char>());
-
-  let mut previous = ' ';
-  for c in text.chars()
+  fn new() -> Translator
   {
-    previous = translate_char(c, previous);
-    result.push(previous);
+    Translator
+    {
+      rules: HashMap::new(),
+    }
   }
 
-  result
+  fn default() -> Translator
+  {
+    Translator
+    {
+      rules: HashMap::new(),
+    }
+  }
+
+  fn translate_char(&self, current : char, previous : char) -> char
+  {
+    // TODO: FIXME.
+    'a'
+  }
+
+  pub fn translate(&self, text : &str) -> String
+  {
+    let mut result = String::with_capacity(text.len() * std::mem::size_of::<char>());
+
+    let mut previous = ' ';
+    for c in text.chars()
+    {
+      previous = self.translate_char(c, previous);
+      result.push(previous);
+    }
+
+    result
+  }
 }
 
 pub fn test()
