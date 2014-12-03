@@ -27,8 +27,8 @@ impl Translator
   {
     match self.rules.get(&(current, previous))
     {
-      Some(result) => return *result,
-      None => return 'a'
+      Some(result) => *result,
+      None => 'a'
     }
   }
 
