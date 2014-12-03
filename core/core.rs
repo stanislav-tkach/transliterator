@@ -28,7 +28,11 @@ impl Translator
     match self.rules.get(&(current, previous))
     {
       Some(result) => *result,
-      None => 'a'
+      None => match self.rules.get(&(current, ' '))
+      {
+        Some(result) => *result,
+        None => current,
+      }
     }
   }
 
