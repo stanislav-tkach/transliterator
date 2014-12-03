@@ -25,8 +25,11 @@ impl Translator
 
   fn translate_char(&self, current : char, previous : char) -> char
   {
-    // TODO: FIXME.
-    'a'
+    match self.rules.get(&(current, previous))
+    {
+      Some(result) => return *result,
+      None => return 'a'
+    }
   }
 
   pub fn translate(&self, text : &str) -> String
