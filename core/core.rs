@@ -38,7 +38,7 @@ impl Translator
 
   pub fn translate(&self, text : &str) -> String
   {
-    let mut result = String::with_capacity(text.len() * std::mem::size_of::<char>());
+    let mut result = String::with_capacity(text.len());
 
     let mut previous = ' ';
     for c in text.chars()
