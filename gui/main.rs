@@ -1,4 +1,4 @@
 fn main()
 {
-  println!("Hello, GUI world!")
+	println!("Hello, GUI world!")
 }
