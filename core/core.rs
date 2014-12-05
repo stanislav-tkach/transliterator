@@ -19,7 +19,7 @@ impl Translator
   {
     Translator
     {
-      rules: HashMap::new(),
+      rules: get_default_rules(),
     }
   }
 
@@ -49,4 +49,13 @@ impl Translator
 
     result
   }
+}
+
+fn get_default_rules() -> HashMap<(char, char), char>
+{
+  let mut result = HashMap::with_capacity(50);
+
+  result.insert(('a', ' '), 'a');
+
+  result
 }
