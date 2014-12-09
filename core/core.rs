@@ -11,14 +11,6 @@ impl Translator
 	{
 		Translator
 		{
-			rules: HashMap::new(),
-		}
-	}
-
-	pub fn default() -> Translator
-	{
-		Translator
-		{
 			rules: get_default_rules(),
 		}
 	}
