@@ -1,9 +1,15 @@
 extern crate core;
 
 #[test]
-fn main()
+fn characters()
 {
 	let translator = core::Translator::new();
 
-	assert_eq!("a", translator.translate("a").as_slice());
+	assert_eq!("а", translator.translate("a"));
 }
+
+#[test]
+fn words()
+{
+}
+
