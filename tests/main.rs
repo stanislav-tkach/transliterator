@@ -56,39 +56,40 @@ fn capital_letters()
 {
 	let translator = core::Translator::new();
 
-	assert_eq!("А", translator.translate(""));
-	assert_eq!("Б", translator.translate(""));
-	assert_eq!("В", translator.translate(""));
-	assert_eq!("Г", translator.translate(""));
-	assert_eq!("Д", translator.translate(""));
-	assert_eq!("Е", translator.translate(""));
-	assert_eq!("Ё", translator.translate(""));
-	assert_eq!("Ж", translator.translate(""));
-	assert_eq!("З", translator.translate(""));
-	assert_eq!("И", translator.translate(""));
-	assert_eq!("Й", translator.translate(""));
-	assert_eq!("К", translator.translate(""));
-	assert_eq!("Л", translator.translate(""));
-	assert_eq!("М", translator.translate(""));
-	assert_eq!("Н", translator.translate(""));
-	assert_eq!("О", translator.translate(""));
-	assert_eq!("П", translator.translate(""));
-	assert_eq!("Р", translator.translate(""));
-	assert_eq!("С", translator.translate(""));
-	assert_eq!("Т", translator.translate(""));
-	assert_eq!("У", translator.translate(""));
-	assert_eq!("Ф", translator.translate(""));
-	assert_eq!("Х", translator.translate(""));
-	assert_eq!("Ц", translator.translate(""));
-	assert_eq!("Ч", translator.translate(""));
-	assert_eq!("Ш", translator.translate(""));
-	assert_eq!("Щ", translator.translate(""));
-	assert_eq!("Ъ", translator.translate(""));
-	assert_eq!("Ы", translator.translate(""));
-	assert_eq!("Ь", translator.translate(""));
-	assert_eq!("Э", translator.translate(""));
-	assert_eq!("Ю", translator.translate(""));
-	assert_eq!("Я", translator.translate(""));
+	assert_eq!("А", translator.translate("A"));
+	assert_eq!("Б", translator.translate("B"));
+	assert_eq!("В", translator.translate("V"));
+	assert_eq!("Г", translator.translate("G"));
+	assert_eq!("Д", translator.translate("D"));
+	assert_eq!("Е", translator.translate("E"));
+	assert_eq!("Ё", translator.translate("JO"));
+	assert_eq!("Ж", translator.translate("ZH"));
+	assert_eq!("З", translator.translate("Z"));
+	assert_eq!("И", translator.translate("I"));
+	assert_eq!("Й", translator.translate("J"));
+	assert_eq!("К", translator.translate("K"));
+	assert_eq!("Л", translator.translate("L"));
+	assert_eq!("М", translator.translate("M"));
+	assert_eq!("Н", translator.translate("N"));
+	assert_eq!("О", translator.translate("O"));
+	assert_eq!("П", translator.translate("P"));
+	assert_eq!("Р", translator.translate("R"));
+	assert_eq!("С", translator.translate("S"));
+	assert_eq!("Т", translator.translate("T"));
+	assert_eq!("У", translator.translate("U"));
+	assert_eq!("Ф", translator.translate("F"));
+	assert_eq!("Х", translator.translate("X"));
+	assert_eq!("Х", translator.translate("H")); // TODO !!!
+	assert_eq!("Ц", translator.translate("C"));
+	assert_eq!("Ч", translator.translate("CH"));
+	assert_eq!("Ш", translator.translate("SH"));
+	assert_eq!("Щ", translator.translate("SHH"));
+	assert_eq!("Ъ", translator.translate("##"));
+	assert_eq!("Ы", translator.translate("Y"));
+	assert_eq!("Ь", translator.translate("''"));
+	assert_eq!("Э", translator.translate("JE"));
+	assert_eq!("Ю", translator.translate("JU"));
+	assert_eq!("Я", translator.translate("JA"));
 }
 
 #[test]
