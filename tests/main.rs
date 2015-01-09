@@ -51,6 +51,7 @@ fn letters()
 	assert_eq!("я", translator.translate("ja"));
 }
 
+#[test]
 fn capital_letters()
 {
 	let translator = core::Translator::new();
