@@ -15,15 +15,16 @@ impl Translator
 		}
 	}
 
-	fn translate_char(&self, current : char, previous : char) -> char
+	// Returns translated characted and boolean value indicating that previous character should be erased.
+	fn translate_char(&self, current : char, previous : char) -> (char, bool)
 	{
 		match self.rules.get(&(current, previous))
 		{
-			Some(result) => *result,
+			Some(result) => (*result, true),
 			None => match self.rules.get(&(current, ' '))
 			{
-				Some(result) => *result,
-				None => current,
+				Some(result) => (*result, false),
+				None => (current, false),
 			}
 		}
 	}
@@ -35,8 +36,14 @@ impl Translator
 		let mut previous = ' ';
 		for c in text.chars()
 		{
-			previous = self.translate_char(c, previous);
-			result.push(previous);
+			let (translated, erasePrevious) = self.translate_char(c, previous);
+			if(erasePrevious)
+			{
+				result.pop();
+			}
+
+			result.push(translated);
+			previous = translated;
 		}
 
 		result
