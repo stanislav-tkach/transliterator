@@ -1,8 +1,8 @@
 [package]
-name = "core"
+name = "translator"
 version = "0.0.1"
 authors = ["DarkEld3r <stanislav.tkach@gmail.com>"]
 
 [lib]
-name = "core"
-path = "core.rs"
+name = "translator"
+path = "translator.rs"

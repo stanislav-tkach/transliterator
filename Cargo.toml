@@ -11,5 +11,5 @@ path = "cui/main.rs"
 name = "transliterator"
 path = "gui/main.rs"
 
-[dependencies.core]
-path = "core"
+[dependencies.translator]
+path = "translator"

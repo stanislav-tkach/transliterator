@@ -1,4 +1,4 @@
-extern crate core;
+extern crate translator;
 
 fn main()
 {

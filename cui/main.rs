@@ -1,4 +1,4 @@
-extern crate core;
+extern crate translator;
 
 fn main()
 {
@@ -10,6 +10,6 @@ fn main()
 		return;
 	}
 
-	let translator = core::Translator::new();
+	let translator = translator::Translator::new();
 	println!("{}", translator.translate(args[1].as_slice()));
 }
