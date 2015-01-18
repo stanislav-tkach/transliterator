@@ -36,8 +36,8 @@ impl Translator
 		let mut previous = ' ';
 		for c in text.chars()
 		{
-			let (translated, erasePrevious) = self.translate_char(c, previous);
-			if(erasePrevious)
+			let (translated, erase_previous) = self.translate_char(c, previous);
+			if erase_previous
 			{
 				result.pop();
 			}
