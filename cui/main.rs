@@ -2,7 +2,7 @@ extern crate translator;
 
 fn main()
 {
-	let args = std::os::args();
+	let args: Vec<String> = std::env::args().collect();
 	if 2 != args.len()
 	{
 		println!("Usage:");
