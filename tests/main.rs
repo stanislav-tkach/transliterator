@@ -99,3 +99,11 @@ fn words()
 
 	assert_eq!("Привет", translator.translate("Privet"));
 }
+
+#[test]
+fn sentences()
+{
+	let translator = translator::Translator::new();
+
+	assert_eq!("Привет нуб", translator.translate("Privet nub"));
+}
