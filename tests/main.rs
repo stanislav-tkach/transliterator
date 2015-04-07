@@ -79,7 +79,7 @@ fn capital_letters()
 	assert_eq!("У", translator.translate("U"));
 	assert_eq!("Ф", translator.translate("F"));
 	assert_eq!("Х", translator.translate("X"));
-	assert_eq!("Х", translator.translate("H")); // TODO !!!
+	assert_eq!("Х", translator.translate("H"));
 	assert_eq!("Ц", translator.translate("C"));
 	assert_eq!("Ч", translator.translate("CH"));
 	assert_eq!("Ш", translator.translate("SH"));
