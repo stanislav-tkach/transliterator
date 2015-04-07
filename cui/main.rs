@@ -2,14 +2,17 @@ extern crate translator;
 
 fn main()
 {
-	let args: Vec<String> = std::env::args().collect();
+	let args = std::env::args();
 	if args.len() < 2
 	{
 		println!("Usage:");
-		println!("{} <text to translate>", args[0]);
+		// TODO: Fix this ugly construction?
+		println!("{} <text to translate>", args.take(1).last().unwrap());
 		return;
 	}
 
+	let text = args.skip(1).fold(String::new(), |result, param| result + " " + &param);
+
 	let translator = translator::Translator::new();
-	println!("{}", translator.translate(&args[1]));
+	println!("{}", translator.translate(&text));
 }
