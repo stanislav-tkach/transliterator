@@ -95,5 +95,7 @@ fn capital_letters()
 #[test]
 fn words()
 {
-}
+	let translator = translator::Translator::new();
 
+	assert_eq!("Привет", translator.translate("Privet"));
+}
