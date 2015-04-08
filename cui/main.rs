@@ -11,7 +11,7 @@ fn main()
 		return;
 	}
 
-	let text = args.skip(1).fold(String::new(), |result, param| result + " " + &param);
+	let text = args.skip(1).fold(String::new(), |result, param| result + " " + &param).trim_left().to_string();
 
 	let translator = translator::Translator::new();
 	println!("{}", translator.translate(&text));
