@@ -20,7 +20,7 @@ impl Translator
 	{
 		match self.rules.get(&(current, previous))
 		{
-			Some(result) => (*result, true),
+			Some(result) => (*result, previous != ' '),
 			None => match self.rules.get(&(current, ' '))
 			{
 				Some(result) => (*result, false),
