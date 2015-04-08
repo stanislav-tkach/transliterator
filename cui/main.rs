@@ -6,7 +6,6 @@ fn main()
 	if args.len() < 2
 	{
 		println!("Usage:");
-		// TODO: Fix this ugly construction?
 		println!("{} <text to translate>", args.take(1).last().unwrap());
 		return;
 	}
