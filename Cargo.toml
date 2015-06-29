@@ -13,3 +13,7 @@ path = "gui/main.rs"
 
 [dependencies.translator]
 path = "translator"
+
+[dependencies]
+conrod = "0.4.0"
+
