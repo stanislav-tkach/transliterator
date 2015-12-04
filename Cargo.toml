@@ -22,3 +22,6 @@ path = "translator"
 
 [dependencies]
 conrod = "*"
+piston = "*"
+piston_window = "*"
+pistoncore-glutin_window = "*"
