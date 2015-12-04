@@ -2,6 +2,12 @@
 name = "transliterator"
 version = "0.0.1"
 authors = ["DarkEld3r <stanislav.tkach@gmail.com>"]
+repository = "https://github.com/DarkEld3r/transliterator.git"
+homepage = "https://github.com/DarkEld3r/transliterator.git"
+license = "MIT"
+readme = "README.md"
+description = "Translit convertor"
+keywords = ["translit", "conrod"]
 
 [[bin]]
 name = "ctransliterator"
@@ -16,4 +22,3 @@ path = "translator"
 
 [dependencies]
 conrod = "0.4.0"
-
