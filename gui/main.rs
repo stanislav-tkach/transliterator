@@ -1,6 +1,5 @@
 extern crate translator;
 
-fn main()
-{
+fn main() {
 	println!("Hello, GUI world!")
 }

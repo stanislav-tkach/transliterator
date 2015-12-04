@@ -1,8 +1,7 @@
 extern crate translator;
 
 #[test]
-fn empty()
-{
+fn empty() {
 	let translator = translator::Translator::new();
 
 	assert_eq!("", translator.translate(""));
@@ -12,8 +11,7 @@ fn empty()
 }
 
 #[test]
-fn letters()
-{
+fn letters() {
 	let translator = translator::Translator::new();
 
 	assert_eq!("а", translator.translate("a"));
@@ -93,16 +91,14 @@ fn capital_letters()
 }
 
 #[test]
-fn words()
-{
+fn words() {
 	let translator = translator::Translator::new();
 
 	assert_eq!("Привет", translator.translate("Privet"));
 }
 
 #[test]
-fn sentences()
-{
+fn sentences() {
 	let translator = translator::Translator::new();
 
 	assert_eq!("Привет нуб", translator.translate("Privet nub"));

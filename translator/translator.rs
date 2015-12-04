@@ -1,44 +1,32 @@
 use std::collections::HashMap;
 
-pub struct Translator
-{
+pub struct Translator {
 	rules: HashMap<(char, char), char>,
 }
 
-impl Translator
-{
-	pub fn new() -> Translator
-	{
-		Translator
-		{
-			rules: get_default_rules(),
-		}
+impl Translator {
+	pub fn new() -> Translator {
+		Translator{ rules: get_default_rules(), }
 	}
 
 	// Returns translated characted and boolean value indicating that previous character should be erased.
-	fn translate_char(&self, current : char, previous : char) -> (char, bool)
-	{
-		match self.rules.get(&(current, previous))
-		{
+	fn translate_char(&self, current : char, previous : char) -> (char, bool) {
+		match self.rules.get(&(current, previous)) {
 			Some(result) => (*result, previous != ' '),
-			None => match self.rules.get(&(current, ' '))
-			{
+			None => match self.rules.get(&(current, ' ')) {
 				Some(result) => (*result, false),
 				None => (current, false),
 			}
 		}
 	}
 
-	pub fn translate(&self, text : &str) -> String
-	{
+	pub fn translate(&self, text : &str) -> String {
 		let mut result = String::with_capacity(text.len());
 
 		let mut previous = ' ';
-		for c in text.chars()
-		{
+		for c in text.chars() {
 			let (translated, erase_previous) = self.translate_char(c, previous);
-			if erase_previous
-			{
+			if erase_previous {
 				result.pop();
 			}
 
@@ -50,8 +38,7 @@ impl Translator
 	}
 }
 
-fn get_default_rules() -> HashMap<(char, char), char>
-{
+fn get_default_rules() -> HashMap<(char, char), char> {
 	let mut result = HashMap::with_capacity(50);
 
 	result.insert(('a', ' '), 'а');
