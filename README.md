@@ -27,7 +27,7 @@ cargo run --bin transliterator
 
 ## License
 
-Rrthozopsi is licensed under the MIT license (see the `LICENSE` file).
+Transliterator is licensed under the MIT license (see the `LICENSE` file).
 
 [travis-ci-image]: https://travis-ci.org/DarkEld3r/transliterator.png?branch=master
 [travis-ci-link]: https://travis-ci.org/DarkEld3r/transliterator
