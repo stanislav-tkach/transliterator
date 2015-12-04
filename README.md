@@ -1,16 +1,37 @@
-transliterator
-==============
+# transliterator
+
+[![license-img][]] [license-file]
+[![travis-ci-image][]] [travis-ci-link]
+[![coveralls-image][]] [coveralls-link]
+
+## Overview
 
 Simple translit convertor.
 
-Dependencies
-------------
-* Cargo - https://github.com/rust-lang/cargo
-* gui? - ?
+## Building
 
-Building
---------
+### Instal FreeType
+Conrod uses [FreeType](http://www.freetype.org/) for font rendering.
 
-    $ git clone https://github.com/DarkEld3r/transliterator.git
-    $ cd transliterator
-    $ cargo build
+### Build
+```sh
+git clone https://github.com/DarkEld3r/transliterator
+cd transliterator
+cargo build
+```
+## Running
+
+```sh
+cargo run
+```
+
+## License
+
+Rrthozopsi is licensed under the MIT license (see the `LICENSE` file).
+
+[travis-ci-image]: https://travis-ci.org/DarkEld3r/transliterator.png?branch=master
+[travis-ci-link]: https://travis-ci.org/DarkEld3r/transliterator
+[license-img]: http://img.shields.io/badge/license-MIT-blue.svg
+[license-file]: https://github.com/DarkEld3r/transliterator/blob/master/LICENSE
+[coveralls-image]: https://coveralls.io/repos/DarkEld3r/transliterator/badge.svg?branch=master&service=github
+[coveralls-link]: https://coveralls.io/github/DarkEld3r/transliterator?branch=master
