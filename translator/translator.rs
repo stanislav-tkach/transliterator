@@ -142,3 +142,9 @@ fn get_default_rules() -> HashMap<(char, char), char>
 
 	result
 }
+
+#[test]
+fn translator_new() {
+    let translator = Translator::new();
+    assert_eq(Translator.rules, get_default_rules());
+}
