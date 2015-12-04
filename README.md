@@ -22,7 +22,7 @@ cargo build
 ## Running
 
 ```sh
-cargo run
+cargo run --bin transliterator
 ```
 
 ## License
