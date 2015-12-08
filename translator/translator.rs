@@ -11,13 +11,13 @@ impl Translator {
 
 	// Returns translated characted and boolean value indicating that previous character should be erased.
 	fn translate_char(&self, current : char, previous : char) -> (char, bool) {
-		match self.rules.get(&(current, previous)) {
-			Some(result) => (*result, previous != ' '),
-			None => match self.rules.get(&(current, ' ')) {
-				Some(result) => (*result, false),
-				None => (current, false),
-			}
-		}
+        if let Some(result) = self.rules.get(&(current, previous)) {
+            return (*result, previous != ' ');
+        }
+        match self.rules.get(&(current, ' ')) {
+            Some(result) => (*result, false),
+            None => (current, false),
+        }
 	}
 
 	pub fn translate(&self, text : &str) -> String {
