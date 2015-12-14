@@ -54,6 +54,7 @@ fn capital_letters()
 {
 	let translator = translator::Translator::new();
 
+    // TODO: Use to_uppercase in order to remove duplication.
 	assert_eq!("А", translator.translate("A"));
 	assert_eq!("Б", translator.translate("B"));
 	assert_eq!("В", translator.translate("V"));
