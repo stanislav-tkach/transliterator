@@ -14,5 +14,11 @@ fn main() {
                                                   .unwrap();
 
     for event in window.ups(60) {
+        self.ui.set_widgets(|ui| {
+            Canvas::new()
+                .pad(30.)
+                .color(conrod::color::rgb(0.2, 0.35, 0.45))
+                .scroll_kids()
+                .set(CANVAS, ui);
     }
 }
