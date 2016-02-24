@@ -34,3 +34,9 @@ fn main() {
         });
     }
 }
+
+widget_ids! {
+    CANVAS,
+    INPUT_TEXT,
+    OUTPUT_TEXT,
+}
