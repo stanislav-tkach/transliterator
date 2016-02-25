@@ -5,10 +5,10 @@ extern crate piston_window;
 #[macro_use] extern crate conrod;
 extern crate find_folder;
 
-use piston_window::{PistonWindow, WindowSettings, Glyphs};
+use piston_window::{PistonWindow, WindowSettings, Glyphs, UpdateEvent};
 use piston::event_loop::{EventLoop};
-use conrod::{Theme, Ui, Canvas, Widget};
-use conrod::color::Colorable;
+use conrod::{Theme, Ui, Canvas, TextBox, Widget, Sizeable};
+use conrod::color::{self, Colorable};
 
 fn main() {
     let window: PistonWindow = WindowSettings::new("Hello Conrod", [800, 600])
@@ -25,14 +25,35 @@ fn main() {
         Ui::new(glyph_cache.unwrap(), theme)
     };
 
-    for event in window.ups(60) {
-        ui.set_widgets(|ui| {
+    for w in window.ups(60) {
+        ui.handle_event(&w);
+
+        w.update(|_| ui.set_widgets(|ui| {
+            let background_color = color::rgb(0.2, 0.35, 0.45);
+            let mut text = "".to_owned();
+
             Canvas::new()
-                .pad(30.)
-                .color(conrod::color::rgb(0.2, 0.35, 0.45))
-                .scroll_kids()
-                .set(CANVAS, ui);
-        });
+                    .pad(30.)
+                    .color(background_color)
+                    .scroll_kids()
+                    .set(CANVAS, ui);
+
+                TextBox::new(&mut text)
+                    .font_size(20)
+                    .w_h(420.0, 40.0)
+                    .color(background_color.invert())
+                    .react(|_string: &mut String|{})
+                    .set(INPUT_TEXT, ui);
+
+            TextBox::new(&mut text)
+                    .font_size(20)
+                    .w_h(320.0, 40.0)
+                    .color(background_color.invert())
+                    .react(|_string: &mut String|{})
+                .set(OUTPUT_TEXT, ui);
+        }));
+
+        w.draw_2d(|context, graphic| ui.draw_if_changed(context, graphic));
     }
 }
 
