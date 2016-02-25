@@ -26,23 +26,24 @@ fn main() {
         Ui::new(glyph_cache.unwrap(), theme)
     };
 
+    let mut original_text = "".to_owned();
+    let mut translated_text = "".to_owned();
+
     for w in window.ups(60) {
         ui.handle_event(&w);
 
         w.update(|_| {
             ui.set_widgets(|ui| {
                 let background_color = color::rgb(0.2, 0.35, 0.45);
-                let mut text = "".to_owned();
 
                 // TODO: Use frame width for text boxes.
-                // TODO: Use separate text-string.3
                 Canvas::new()
                     .pad(30.)
                     .color(background_color)
                     .scroll_kids()
                     .set(CANVAS, ui);
 
-                TextBox::new(&mut text)
+                TextBox::new(&mut original_text)
                     .font_size(20)
                     .w_h(420.0, 40.0)
                     .mid_left_of(CANVAS)
@@ -50,7 +51,7 @@ fn main() {
                     .react(|_string: &mut String| {})
                     .set(INPUT_TEXT, ui);
 
-                TextBox::new(&mut text)
+                TextBox::new(&mut translated_text)
                     .font_size(20)
                     .w_h(420.0, 40.0)
                     .down_from(INPUT_TEXT, 45.0)
