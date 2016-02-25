@@ -34,6 +34,8 @@ fn main() {
                 let background_color = color::rgb(0.2, 0.35, 0.45);
                 let mut text = "".to_owned();
 
+                // TODO: Use frame width for text boxes.
+                // TODO: Use separate text-string.3
                 Canvas::new()
                     .pad(30.)
                     .color(background_color)
@@ -50,7 +52,7 @@ fn main() {
 
                 TextBox::new(&mut text)
                     .font_size(20)
-                    .w_h(320.0, 40.0)
+                    .w_h(420.0, 40.0)
                     .down_from(INPUT_TEXT, 45.0)
                     .color(background_color.invert())
                     .react(|_string: &mut String| {})
