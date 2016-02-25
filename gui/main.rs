@@ -8,7 +8,7 @@ extern crate find_folder;
 
 use piston_window::{PistonWindow, WindowSettings, Glyphs, UpdateEvent};
 use piston::event_loop::EventLoop;
-use conrod::{Theme, Ui, Canvas, TextBox, Widget, Sizeable};
+use conrod::{Theme, Ui, Canvas, TextBox, Widget, Sizeable, Positionable};
 use conrod::color::{self, Colorable};
 
 fn main() {
@@ -43,6 +43,7 @@ fn main() {
                 TextBox::new(&mut text)
                     .font_size(20)
                     .w_h(420.0, 40.0)
+                    .mid_left_of(CANVAS)
                     .color(background_color.invert())
                     .react(|_string: &mut String| {})
                     .set(INPUT_TEXT, ui);
@@ -50,6 +51,7 @@ fn main() {
                 TextBox::new(&mut text)
                     .font_size(20)
                     .w_h(320.0, 40.0)
+                    .down_from(INPUT_TEXT, 45.0)
                     .color(background_color.invert())
                     .react(|_string: &mut String| {})
                     .set(OUTPUT_TEXT, ui);
