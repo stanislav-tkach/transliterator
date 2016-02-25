@@ -31,7 +31,7 @@ fn main() {
     let mut original_text = "".to_owned();
     let mut translated_text = "".to_owned();
 
-    let translator = translator::Translator::new();
+    let translator = Translator::new();
 
     for w in window.ups(60) {
         ui.handle_event(&w);
