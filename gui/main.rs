@@ -6,6 +6,8 @@ extern crate piston_window;
 extern crate conrod;
 extern crate find_folder;
 
+use translator::Translator;
+
 use piston_window::{PistonWindow, WindowSettings, Glyphs, UpdateEvent};
 use piston::event_loop::EventLoop;
 use conrod::{Theme, Ui, Canvas, TextBox, Widget, Sizeable, Positionable};
@@ -28,6 +30,8 @@ fn main() {
 
     let mut original_text = "".to_owned();
     let mut translated_text = "".to_owned();
+
+    let translator = translator::Translator::new();
 
     for w in window.ups(60) {
         ui.handle_event(&w);
@@ -62,6 +66,8 @@ fn main() {
         });
 
         w.draw_2d(|context, graphic| ui.draw_if_changed(context, graphic));
+
+        translated_text = translator.translate(&original_text);
     }
 }
 
