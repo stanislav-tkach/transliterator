@@ -3,6 +3,7 @@
 [![license-image][]] [license-file]
 [![travis-ci-image][]] [travis-ci-link]
 [![coveralls-image][]] [coveralls-link]
+[![clippy-image][]] [clippy-link]
 
 ## Overview
 
@@ -35,3 +36,5 @@ Transliterator is licensed under the MIT license (see the `LICENSE` file).
 [license-file]: https://github.com/DarkEld3r/transliterator/blob/master/LICENSE
 [coveralls-image]: https://coveralls.io/repos/DarkEld3r/transliterator/badge.svg?branch=master&service=github
 [coveralls-link]: https://coveralls.io/github/DarkEld3r/transliterator?branch=master
+[clippy-image]: http://clippy.bashy.io/github/DarkEld3r/transliterator/master/badge.svg
+[clippy-link]: http://clippy.bashy.io/github/DarkEld3r/transliterator/master/log
