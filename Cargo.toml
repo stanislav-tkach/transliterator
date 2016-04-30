@@ -21,6 +21,5 @@ path = "gui/main.rs"
 path = "translator"
 
 [dependencies]
-piston_window = "0.37.0"
-conrod = "*"
+piston_window = "0.43.0"
 find_folder = "*"
