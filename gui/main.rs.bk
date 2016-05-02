@@ -67,8 +67,7 @@ fn main() {
             })
         });
 
-        window.draw_2d(&event,
-                       |context, graphic| ui.draw_if_changed(context, graphic));
+        window.draw_2d(&event, |context, graphic| ui.draw_if_changed(context, graphic));
 
         translated_text = translator.translate(&original_text);
     }
