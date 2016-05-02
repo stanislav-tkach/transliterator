@@ -22,4 +22,5 @@ path = "translator"
 
 [dependencies]
 piston_window = "0.44.0"
+conrod = "*"
 find_folder = "*"
