@@ -15,13 +15,13 @@ type Backend = (<G2d<'static> as Graphics>::Texture, Glyphs);
 type Ui = conrod::Ui<Backend>;
 
 fn main() {
-    let window: PistonWindow = WindowSettings::new("Hello Conrod", [800, 600])
+    let mut window: PistonWindow = WindowSettings::new("Hello Conrod", [800, 600])
                                    .exit_on_esc(true)
                                    .vsync(true)
                                    .build()
                                    .unwrap();
 
-    let mut ui: Ui = {
+    let mut ui = {
         let assets_path = find_folder::Search::KidsThenParents(3, 5).for_folder("assets").unwrap();
         let font_path = assets_path.join("NotoSans-Regular.ttf");
         let theme = Theme::default();
@@ -39,7 +39,7 @@ fn main() {
         ui.handle_event(&event);
 
         event.update(|_| {
-            ui.set_widgets(|ui| {
+            ui.set_widgets(|mut ui| {
                 let background_color = color::rgb(0.2, 0.35, 0.45);
 
                 // TODO: Use frame width for text boxes.
