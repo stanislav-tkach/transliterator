@@ -16,10 +16,10 @@ type Ui = conrod::Ui<Backend>;
 
 fn main() {
     let mut window: PistonWindow = WindowSettings::new("Hello Conrod", [800, 600])
-                                   .exit_on_esc(true)
-                                   .vsync(true)
-                                   .build()
-                                   .unwrap();
+                                       .exit_on_esc(true)
+                                       .vsync(true)
+                                       .build()
+                                       .unwrap();
 
     let mut ui = {
         let assets_path = find_folder::Search::KidsThenParents(3, 5).for_folder("assets").unwrap();
